@@ -1,9 +1,9 @@
 import streamlit as st
 from openai import OpenAI
 
-client = OpenAI(api_key="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")
+client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
 
-st.title("Chatbot")
+st.title("Gaurav's Chatbot")
 
 # Initialize memory
 if "messages" not in st.session_state:
